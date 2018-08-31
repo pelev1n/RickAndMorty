@@ -18,9 +18,8 @@ import retrofit2.Response;
 
 public class Presenter implements Contract.Presenter{
 
-    List<Result> result;
     Context mContext;
-    MainActivity view;
+    Contract.Model view;
 
     public Presenter(MainActivity view, Context context) {
         this.mContext = context;
