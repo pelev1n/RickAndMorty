@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void viewAllCharacters(List<Result> resultList) {
+    public void viewAllCharacters() {
+        List<Result> resultList = presenter.getAllCharacters();
         CharacterAdapter characterAdapter = new CharacterAdapter(resultList,this);
         recyclerView.setAdapter(characterAdapter);
 
