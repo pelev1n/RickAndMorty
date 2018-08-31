@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="109dp"
+        android:layout_height="122dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="24dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="156dp"
+            android:layout_marginTop="20dp"
+            android:text="Paddington"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/statusView"
+            android:layout_below="@+id/nameView"
+            android:layout_width="111dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="156dp"
+            android:layout_marginTop="12dp"
+            android:textSize="7sp"
+            android:text="Animantion | Comedy"/>
+
+        <TextView
+            android:id="@+id/speciesView"
+            android:layout_below="@+id/statusView"
+            android:layout_width="111dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="156dp"
+            android:layout_marginTop="12dp"
+            android:textSize="7sp"
+            android:text="IMDB 8.1"/>
+
+    </RelativeLayout>
+</RelativeLayout>
+
