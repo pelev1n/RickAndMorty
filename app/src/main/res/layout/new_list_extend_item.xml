@@ -4,8 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="110dp"
@@ -14,7 +13,7 @@
         android:layout_marginTop="57dp"
         app:cardBackgroundColor="@color/cardview_light_background"
         app:cardCornerRadius="7dp"
-        app:cardElevation="0dp">
+        app:cardElevation="16dp">
 
         <TextView
             android:id="@+id/nameView"
@@ -36,13 +35,13 @@
 
         <TextView
             android:id="@+id/speciesView"
-            android:layout_below="@+id/statusView"
             android:layout_width="wrap_content"
             android:layout_height="15dp"
+            android:layout_below="@+id/statusView"
             android:layout_marginLeft="156dp"
             android:layout_marginTop="58dp"
-            android:textSize="12sp"
-            android:text="Speciec"/>
+            android:text="Speciec"
+            android:textSize="12sp" />
 
         <ImageView
             android:id="@+id/arrow"
@@ -50,126 +49,125 @@
             android:layout_height="15dp"
             android:layout_marginLeft="330dp"
             android:layout_marginTop="80dp"
-            android:src="@drawable/ic_left_arrow">
-        </ImageView>
-
-
+            android:src="@drawable/ic_left_arrow"></ImageView>
 
     </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="109dp"
-        android:layout_height="122dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginTop="24dp"
-        app:cardBackgroundColor="@color/cardview_light_background"
-        app:cardCornerRadius="7dp"
-        app:cardElevation="0dp">
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="109dp"
+            android:layout_height="122dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="16dp">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-    </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
 
-    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-        android:id="@+id/expandableLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="167dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        app:ael_expanded="false"
-        app:ael_duration="400"
-        app:ael_interpolator="accelerate"
-        app:ael_orientation="vertical">
-        <LinearLayout
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#ffffff"
-            android:elevation="2dp">
-
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="167dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
+                android:background="#ffffff"
+                android:elevation="2dp"
+                android:orientation="vertical">
 
-                android:orientation="horizontal"
 
-                android:outlineProvider="bounds"
-                >
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="Gender:"
-                    android:textColor="@android:color/secondary_text_light"/>
-                <TextView
-                    android:id="@+id/gender_extend"
+                    android:orientation="horizontal"
+
+                    android:outlineProvider="bounds"
+
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Gender:"
+                        android:textColor="@android:color/secondary_text_light" />
+
+                    <TextView
+                        android:id="@+id/gender_extend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Male" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Male"/>
+                    android:orientation="horizontal"
 
+                    android:outlineProvider="bounds"
+
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Place of Birth"
+                        android:textColor="@android:color/secondary_text_light" />
+
+                    <TextView
+                        android:id="@+id/place_of_birth_extend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Earth" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:outlineProvider="bounds"
+
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Location:"
+                        android:textColor="@android:color/secondary_text_light" />
+
+                    <TextView
+                        android:id="@+id/location_extend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Earth" />
+
+                </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-
-                android:orientation="horizontal"
-
-                android:outlineProvider="bounds"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="Place of Birth"
-                    android:textColor="@android:color/secondary_text_light"/>
-                <TextView
-                    android:id="@+id/place_of_birth_extend"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Earth"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-
-                android:orientation="horizontal"
-
-                android:outlineProvider="bounds"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="Location:"
-                    android:textColor="@android:color/secondary_text_light"/>
-                <TextView
-                    android:id="@+id/location_extend"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Earth"/>
-
-            </LinearLayout>
-        </LinearLayout>
-    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-
-
-
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
 </RelativeLayout>
 

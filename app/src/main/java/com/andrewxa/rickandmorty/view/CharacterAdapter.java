@@ -50,6 +50,7 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
                 .load(result.getImage())
                 .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE))
                 .into(holder.image);
+
         holder.name.setText(name);
         holder.status.setText(status);
         holder.species.setText(species);
