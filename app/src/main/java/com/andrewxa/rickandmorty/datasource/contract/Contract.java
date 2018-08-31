@@ -1,11 +1,15 @@
 package com.andrewxa.rickandmorty.datasource.contract;
+import com.andrewxa.rickandmorty.datasource.model.Result;
+
+import java.util.List;
 
 public class Contract {
-    interface Model {
-
+    public interface Model {
+        void getAllCharacters();
+        void showAllCharacters(List<Result> resultList);
     }
 
-    interface Presenter {
-        void getAllCharacters();
+    public interface Presenter {
+        void requestAllCharacters();
     }
 }

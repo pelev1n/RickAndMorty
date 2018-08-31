@@ -5,12 +5,13 @@ import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 
 import com.andrewxa.rickandmorty.R;
+import com.andrewxa.rickandmorty.datasource.contract.Contract;
 import com.andrewxa.rickandmorty.datasource.model.Result;
 import com.andrewxa.rickandmorty.presenter.Presenter;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Contract.Model {
 
     Presenter presenter;
     RecyclerView recyclerView;
@@ -20,22 +21,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        recyclerView = (RecyclerView)findViewById(R.id.character_list);
+        recyclerView = (RecyclerView) findViewById(R.id.character_list);
 
-        presenter = new Presenter(this,this);
+        presenter = new Presenter(this, this);
 
-        init();
-    }
-
-    public void init() {
-        presenter.getAllCharacters();
+        getAllCharacters();
     }
 
 
-    public void viewAllCharacters() {
-        List<Result> resultList = presenter.getAllCharacters();
-        CharacterAdapter characterAdapter = new CharacterAdapter(resultList,this);
+    @Override
+    public void getAllCharacters() {
+        presenter.requestAllCharacters();
+    }
+
+    @Override
+    public void showAllCharacters(List<Result> resultList) {
+        CharacterAdapter characterAdapter = new CharacterAdapter(resultList, this);
         recyclerView.setAdapter(characterAdapter);
-
     }
 }
