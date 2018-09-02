@@ -35,7 +35,9 @@
             android:layout_height="79dp"
             app:tabMode="fixed"
             app:tabGravity="fill"
-            style="@style/WhiteStyleTheme"/>
+            style="@style/WhiteStyleTheme"
+            app:tabIndicatorHeight="0dp"
+            app:tabBackground="@android:color/transparent"/>
 
     </android.support.design.widget.AppBarLayout>
 

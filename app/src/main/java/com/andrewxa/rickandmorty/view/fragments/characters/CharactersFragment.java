@@ -1,4 +1,4 @@
-package com.andrewxa.rickandmorty.view.fragments;
+package com.andrewxa.rickandmorty.view.fragments.characters;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
