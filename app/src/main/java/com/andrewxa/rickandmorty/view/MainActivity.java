@@ -1,5 +1,6 @@
 package com.andrewxa.rickandmorty.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
@@ -11,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.andrewxa.rickandmorty.R;
@@ -30,16 +32,15 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
     CharacterAdapter adapter;
     TabLayout tabLayout;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         initToolbar();
         initTabLayoutViewPager();
-
-        tabLayout.getTabAt(0).setCustomView(R.layout.custom_tab);
-        tabLayout.getTabAt(1).setCustomView(R.layout.custom_tab);
-        tabLayout.getTabAt(2).setCustomView(R.layout.custom_tab);
+        initTabsView();
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -70,9 +71,7 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
             }
         });
 
-
         recyclerView = (RecyclerView) findViewById(R.id.character_list);
-
         presenter = new Presenter(this, this);
 
         getAllCharacters();
@@ -105,6 +104,22 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
     }
 
 
+    public void initTabsView() {
+        RelativeLayout tabCharacters = (RelativeLayout) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        TextView cardCharTextView = (TextView) tabCharacters.findViewById(R.id.custom_card_nameView);
+        cardCharTextView.setText("Characters");
+        tabLayout.getTabAt(0).setCustomView(tabCharacters);
+
+        RelativeLayout tabLocations = (RelativeLayout) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        TextView cardLocTextView = (TextView) tabLocations.findViewById(R.id.custom_card_nameView);
+        cardLocTextView.setText("Locations");
+        tabLayout.getTabAt(1).setCustomView(tabLocations);
+
+        RelativeLayout tabEpisodes = (RelativeLayout) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        TextView cardEpTextView = (TextView) tabEpisodes.findViewById(R.id.custom_card_nameView);
+        cardEpTextView.setText("Episodes");
+        tabLayout.getTabAt(2).setCustomView(tabEpisodes);
+    }
     @Override
     public void getAllCharacters() {
         presenter.requestAllCharacters();
