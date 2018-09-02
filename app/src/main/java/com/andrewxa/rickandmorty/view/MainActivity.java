@@ -1,11 +1,15 @@
 package com.andrewxa.rickandmorty.view;
 
+import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.TextView;
 
 import com.andrewxa.rickandmorty.R;
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
     Presenter presenter;
     RecyclerView recyclerView;
     CharacterAdapter adapter;
+    TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,18 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
         setContentView(R.layout.activity_main);
         initToolbar();
         initTabLayoutViewPager();
+
+        View headerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE))
+                .inflate(R.layout.custom_tab_clicked, null, false);
+
+
+        CardView cardView = (CardView) headerView.findViewById(R.id.custom_card);
+
+        tabLayout.getTabAt(0).setCustomView(R.layout.custom_tab_clicked);
+        tabLayout.getTabAt(1).setCustomView(R.layout.custom_tab_clicked);
+        tabLayout.getTabAt(2).setCustomView(R.layout.custom_tab_clicked);
+
+
         recyclerView = (RecyclerView) findViewById(R.id.character_list);
 
         presenter = new Presenter(this, this);
@@ -49,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
     }
 
     private void initTabLayoutViewPager() {
-        TabLayout tabLayout = findViewById(R.id.tablayout_id);
+        tabLayout = findViewById(R.id.tablayout_id);
 
         ViewPager viewPager = findViewById(R.id.viewpager_id);
         ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
