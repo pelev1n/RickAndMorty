@@ -11,7 +11,7 @@
         app:cardBackgroundColor="@color/colorButtonClicked"
         app:cardCornerRadius="6dp"
         app:cardElevation="16dp"
-        android:id="@+id/custom_card">
+        android:id="@+id/custom_card_clicked">
 
         <RelativeLayout
             android:layout_width="match_parent"

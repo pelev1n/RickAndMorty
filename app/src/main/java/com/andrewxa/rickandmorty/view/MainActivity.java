@@ -1,6 +1,7 @@
 package com.andrewxa.rickandmorty.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -36,15 +37,38 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
         initToolbar();
         initTabLayoutViewPager();
 
-        View headerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE))
-                .inflate(R.layout.custom_tab_clicked, null, false);
+        tabLayout.getTabAt(0).setCustomView(R.layout.custom_tab);
+        tabLayout.getTabAt(1).setCustomView(R.layout.custom_tab);
+        tabLayout.getTabAt(2).setCustomView(R.layout.custom_tab);
 
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                View view = tab.getCustomView();
+                CardView cardView = (CardView) view.findViewById(R.id.custom_card);
+                cardView.setRadius(10);
+                cardView.setCardElevation(0);
+                cardView.setCardBackgroundColor(Color.parseColor("#E53935"));
+                TextView selectedText = (TextView) view.findViewById(R.id.custom_card_nameView);
+                selectedText.setTextColor(Color.parseColor("#FFFFFF"));
+            }
 
-        CardView cardView = (CardView) headerView.findViewById(R.id.custom_card);
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                View view = tab.getCustomView();
+                CardView cardView = (CardView) view.findViewById(R.id.custom_card);
+                cardView.setRadius(10);
+                cardView.setCardElevation(0);
+                cardView.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
+                TextView selectedText = (TextView) view.findViewById(R.id.custom_card_nameView);
+                selectedText.setTextColor(Color.parseColor("#656589"));
+            }
 
-        tabLayout.getTabAt(0).setCustomView(R.layout.custom_tab_clicked);
-        tabLayout.getTabAt(1).setCustomView(R.layout.custom_tab_clicked);
-        tabLayout.getTabAt(2).setCustomView(R.layout.custom_tab_clicked);
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
 
         recyclerView = (RecyclerView) findViewById(R.id.character_list);
