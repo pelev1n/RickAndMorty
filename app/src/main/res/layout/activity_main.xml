@@ -14,13 +14,24 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            />
+            android:layout_height="78dp"
+            android:theme="@style/WhiteStyleTheme"
+            app:contentInsetLeft="0dp">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/WhiteStyleTheme"
+                android:layout_gravity="center"
+                android:textSize="25dp"/>
+
+        </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
     <LinearLayout
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="78dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -42,4 +53,6 @@
         android:id="@+id/characterBtn"
         android:layout_width="99dp"
         android:layout_height="40dp"
-        android:layout_marginTop="14dp"/>-->
+        android:layout_marginTop="14dp"/>
+
+        android:layout_height="?attr/actionBarSize"-->

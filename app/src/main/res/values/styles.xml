@@ -8,6 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="WhiteStyleTheme" parent="AppTheme">
+        <item name="android:textColorPrimary">#707070</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
     <!-- Base application theme. -->
     <!--<style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         &lt;!&ndash; Customize your theme here. &ndash;&gt;

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
 import com.andrewxa.rickandmorty.R;
 import com.andrewxa.rickandmorty.datasource.contract.Contract;
@@ -23,16 +24,22 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Hello");
-        setSupportActionBar(toolbar);
-
+        initialToolbar();
         recyclerView = (RecyclerView) findViewById(R.id.character_list);
 
         presenter = new Presenter(this, this);
 
         getAllCharacters();
+    }
+
+    public void initialToolbar() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+
+        toolbar.setTitle("Rick and Morty");
+        setSupportActionBar(toolbar);
+        mTitle.setText(toolbar.getTitle());
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
 
