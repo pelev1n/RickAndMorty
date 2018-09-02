@@ -12,6 +12,7 @@ import com.andrewxa.rickandmorty.R;
 import com.andrewxa.rickandmorty.datasource.contract.Contract;
 import com.andrewxa.rickandmorty.datasource.model.Result;
 import com.andrewxa.rickandmorty.presenter.Presenter;
+import com.andrewxa.rickandmorty.view.fragments.CharactersFragment;
 
 import java.util.List;
 
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
         ViewPager viewPager = findViewById(R.id.viewpager_id);
         ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(CharactersFragment.newInstance(arenaAccInfo),"Characters");
+        adapter.addFragment(CharactersFragment.newInstance(),"Characters");
         adapter.addFragment(LocationsFragment.newInstance(arenaAccInfo),"Locations");
         adapter.addFragment(EpisodesFragment.newInstance(arenaAccInfo),"Episodes");
 
