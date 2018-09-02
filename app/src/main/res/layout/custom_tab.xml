@@ -18,6 +18,12 @@
         app:tabTextColor="#FFFFFF"
         app:cardUseCompatPadding="true">
 
+<!--        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="card_">-->
+
+        </LinearLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
