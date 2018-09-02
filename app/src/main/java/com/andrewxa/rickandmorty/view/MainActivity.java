@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
         ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
 
         adapter.addFragment(CharactersFragment.newInstance(arenaAccInfo),"Characters");
-        adapter.addFragment(CharactersFragment.newInstance(arenaAccInfo),"Locations");
-        adapter.addFragment(CharactersFragment.newInstance(arenaAccInfo),"Episodes");
+        adapter.addFragment(LocationsFragment.newInstance(arenaAccInfo),"Locations");
+        adapter.addFragment(EpisodesFragment.newInstance(arenaAccInfo),"Episodes");
 
 
         viewPager.setAdapter(adapter);
