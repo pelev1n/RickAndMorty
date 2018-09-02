@@ -34,7 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="79dp"
             app:tabMode="fixed"
-            app:tabGravity="fill" />
+            app:tabGravity="fill"
+            style="@style/WhiteStyleTheme"/>
 
     </android.support.design.widget.AppBarLayout>
 

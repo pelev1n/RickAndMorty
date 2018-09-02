@@ -29,4 +29,5 @@ public class CharactersFragment extends Fragment{
         return view;
     }
 
+
 }
