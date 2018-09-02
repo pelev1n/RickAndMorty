@@ -24,7 +24,8 @@
                 android:layout_height="wrap_content"
                 style="@style/WhiteStyleTheme"
                 android:layout_gravity="center"
-                android:textSize="25dp"/>
+                android:textSize="15dp"
+                android:textAllCaps="true"/>
 
         </android.support.v7.widget.Toolbar>
 
