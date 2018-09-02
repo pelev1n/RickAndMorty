@@ -1,6 +1,7 @@
 package com.andrewxa.rickandmorty.view;
 
-import android.support.annotation.NonNull;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -24,7 +25,8 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initialToolbar();
+        initToolbar();
+        initTabLayoutViewPager();
         recyclerView = (RecyclerView) findViewById(R.id.character_list);
 
         presenter = new Presenter(this, this);
@@ -32,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
         getAllCharacters();
     }
 
-    public void initialToolbar() {
+
+    public void initToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
 
@@ -40,6 +43,21 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
         setSupportActionBar(toolbar);
         mTitle.setText(toolbar.getTitle());
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+    }
+
+    private void initTabLayoutViewPager() {
+        TabLayout tabLayout = findViewById(R.id.tablayout_id);
+
+        ViewPager viewPager = findViewById(R.id.viewpager_id);
+        ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
+
+        adapter.addFragment(CharactersFragment.newInstance(arenaAccInfo),"Characters");
+        adapter.addFragment(CharactersFragment.newInstance(arenaAccInfo),"Locations");
+        adapter.addFragment(CharactersFragment.newInstance(arenaAccInfo),"Episodes");
+
+
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
 
