@@ -1,5 +1,6 @@
 package com.andrewxa.rickandmorty.view;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -17,6 +18,7 @@ import com.andrewxa.rickandmorty.R;
 import com.andrewxa.rickandmorty.datasource.contract.Contract;
 import com.andrewxa.rickandmorty.datasource.model.Result;
 import com.andrewxa.rickandmorty.presenter.Presenter;
+import com.andrewxa.rickandmorty.view.fragments.characters.CharacterAdapter;
 import com.andrewxa.rickandmorty.view.fragments.characters.CharactersFragment;
 import com.andrewxa.rickandmorty.view.fragments.EpisodesFragment;
 import com.andrewxa.rickandmorty.view.fragments.LocationsFragment;
@@ -72,7 +74,9 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
         recyclerView = (RecyclerView) findViewById(R.id.character_list);
         presenter = new Presenter(this, this);
 
-        getAllCharacters();
+        /*getAllCharacters();*/
+        /*Intent intent = new Intent(this,CharactersFragment.class);
+        startActivity(intent);*/
     }
 
 
@@ -125,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
 
     @Override
     public void showAllCharacters(List<Result> resultList) {
-        CharacterAdapter characterAdapter = new CharacterAdapter(resultList, this);
-        recyclerView.setAdapter(characterAdapter);
+        /*CharacterAdapter characterAdapter = new CharacterAdapter(resultList, this);
+        recyclerView.setAdapter(characterAdapter);*/
     }
 }

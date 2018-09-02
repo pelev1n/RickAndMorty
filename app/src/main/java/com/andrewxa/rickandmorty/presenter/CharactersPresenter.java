@@ -1,12 +1,14 @@
 package com.andrewxa.rickandmorty.presenter;
 
 import android.content.Context;
+import android.view.View;
 
 import com.andrewxa.rickandmorty.RickAndMortyApp;
 import com.andrewxa.rickandmorty.datasource.contract.Contract;
 import com.andrewxa.rickandmorty.datasource.model.CharactersInfo;
 import com.andrewxa.rickandmorty.datasource.model.Result;
 import com.andrewxa.rickandmorty.view.MainActivity;
+import com.andrewxa.rickandmorty.view.fragments.characters.CharactersFragment;
 
 import java.util.List;
 
@@ -14,18 +16,17 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Presenter implements Contract.Presenter{
+public class CharactersPresenter implements Contract.Presenter{
 
     Context mContext;
     Contract.Model view;
 
-    public Presenter(MainActivity view, Context context) {
+    public CharactersPresenter(CharactersFragment view, Context context) {
         this.mContext = context;
         this.view = view;
     }
 
     public void requestAllCharacters() {
-        List<Result> r;
         Call<CharactersInfo> charachters = RickAndMortyApp.getRickAndMortyApi().getAllCharachters();
         charachters.enqueue(new Callback<CharactersInfo>() {
             @Override
