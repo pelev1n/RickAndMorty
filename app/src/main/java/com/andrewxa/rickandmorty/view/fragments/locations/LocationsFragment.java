@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.andrewxa.rickandmorty.R;
 
-public class LocationsFragment extends Fragment{
+public class LocationsFragment extends Fragment implements {
 
     public LocationsFragment() {
 
@@ -26,7 +26,7 @@ public class LocationsFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.new_list_extend_item, container, false);
+        View view = inflater.inflate(R.layout.characters_list, container, false);
 
         return view;
     }

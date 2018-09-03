@@ -26,7 +26,7 @@ public class EpisodesFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.new_list_extend_item, container, false);
+        View view = inflater.inflate(R.layout.characters_list, container, false);
 
         return view;
     }
