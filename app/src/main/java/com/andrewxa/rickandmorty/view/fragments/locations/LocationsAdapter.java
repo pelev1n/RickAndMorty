@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.andrewxa.rickandmorty.R;
-import com.andrewxa.rickandmorty.datasource.model.characters.Result;
+import com.andrewxa.rickandmorty.datasource.model.locations.Result;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
@@ -33,7 +33,7 @@ public class LocationsAdapter extends RecyclerView.Adapter<LocationsAdapter.View
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.characters_list, parent, false);
+        View view = inflater.inflate(R.layout.locations_list, parent, false);
         return new ViewHolder(view);
     }
 
@@ -41,18 +41,18 @@ public class LocationsAdapter extends RecyclerView.Adapter<LocationsAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Result result = resultList.get(position);
         String name = result.getName();
-        String status = result.getStatus();
-        String species = result.getSpecies();
+        String type = result.getType();
+        String dimension = result.getDimension();
 
 
         Glide.with(context)
-                .load(result.getImage())
+                .load(R.drawable.ic_solar_system)
                 .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE))
                 .into(holder.image);
 
         holder.planetName.setText(name);
-        holder.status.setText(status);
-        holder.species.setText(species);
+        holder.planetType.setText(type);
+        holder.dimension.setText(dimension);
     }
 
 

@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.andrewxa.rickandmorty.R;
 
-public class LocationsFragment extends Fragment implements {
+public class LocationsFragment extends Fragment implements Locations{
 
     public LocationsFragment() {
 
@@ -28,6 +28,12 @@ public class LocationsFragment extends Fragment implements {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.characters_list, container, false);
 
+
         return view;
+    }
+
+    @Override
+    public void getAllLocations() {
+
     }
 }
