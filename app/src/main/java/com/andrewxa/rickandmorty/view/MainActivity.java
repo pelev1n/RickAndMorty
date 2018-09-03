@@ -19,7 +19,7 @@ import com.andrewxa.rickandmorty.datasource.model.characters.Result;
 import com.andrewxa.rickandmorty.presenter.Presenter;
 import com.andrewxa.rickandmorty.view.fragments.characters.CharacterAdapter;
 import com.andrewxa.rickandmorty.view.fragments.characters.CharactersFragment;
-import com.andrewxa.rickandmorty.view.fragments.EpisodesFragment;
+import com.andrewxa.rickandmorty.view.fragments.episodes.EpisodesFragment;
 import com.andrewxa.rickandmorty.view.fragments.locations.LocationsFragment;
 
 import java.util.List;
