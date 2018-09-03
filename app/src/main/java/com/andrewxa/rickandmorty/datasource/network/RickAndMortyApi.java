@@ -1,6 +1,7 @@
 package com.andrewxa.rickandmorty.datasource.network;
 
 import com.andrewxa.rickandmorty.datasource.model.characters.CharactersInfo;
+import com.andrewxa.rickandmorty.datasource.model.episodes.EpisodesInfo;
 import com.andrewxa.rickandmorty.datasource.model.locations.LocationsInfo;
 
 import retrofit2.Call;
@@ -13,6 +14,9 @@ public interface RickAndMortyApi {
 
     @GET("location")
     Call<LocationsInfo> getAllLocations();
+
+    @GET("episode")
+    Call<EpisodesInfo> getAllEpisodes();
 
 
 }
