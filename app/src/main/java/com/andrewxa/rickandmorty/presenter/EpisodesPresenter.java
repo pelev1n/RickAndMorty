@@ -22,7 +22,7 @@ public class EpisodesPresenter {
         this.view = view;
     }
 
-    public void requestAllCharacters() {
+    public void requestAllEpisodes() {
         Call<EpisodesInfo> episodes = RickAndMortyApp.getRickAndMortyApi().getAllEpisodes();
         episodes.enqueue(new Callback<EpisodesInfo>() {
             @Override
