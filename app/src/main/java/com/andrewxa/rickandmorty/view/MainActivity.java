@@ -1,6 +1,5 @@
 package com.andrewxa.rickandmorty.view;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -21,7 +20,7 @@ import com.andrewxa.rickandmorty.presenter.Presenter;
 import com.andrewxa.rickandmorty.view.fragments.characters.CharacterAdapter;
 import com.andrewxa.rickandmorty.view.fragments.characters.CharactersFragment;
 import com.andrewxa.rickandmorty.view.fragments.EpisodesFragment;
-import com.andrewxa.rickandmorty.view.fragments.LocationsFragment;
+import com.andrewxa.rickandmorty.view.fragments.locations.LocationsFragment;
 
 import java.util.List;
 
