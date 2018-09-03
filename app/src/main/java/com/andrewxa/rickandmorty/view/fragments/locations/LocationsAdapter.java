@@ -20,7 +20,6 @@ import java.util.List;
 
 public class LocationsAdapter extends RecyclerView.Adapter<LocationsAdapter.ViewHolder> {
 
-    private CompoundButton.OnCheckedChangeListener listener;
     private List<Result> resultList;
     Context context;
 
