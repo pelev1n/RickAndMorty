@@ -1,5 +1,5 @@
 package com.andrewxa.rickandmorty.datasource.contract;
-import com.andrewxa.rickandmorty.datasource.model.Result;
+import com.andrewxa.rickandmorty.datasource.model.characters.Result;
 
 import java.util.List;
 

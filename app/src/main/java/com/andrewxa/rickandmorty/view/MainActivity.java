@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.andrewxa.rickandmorty.R;
 import com.andrewxa.rickandmorty.datasource.contract.Contract;
-import com.andrewxa.rickandmorty.datasource.model.Result;
+import com.andrewxa.rickandmorty.datasource.model.characters.Result;
 import com.andrewxa.rickandmorty.presenter.Presenter;
 import com.andrewxa.rickandmorty.view.fragments.characters.CharacterAdapter;
 import com.andrewxa.rickandmorty.view.fragments.characters.CharactersFragment;

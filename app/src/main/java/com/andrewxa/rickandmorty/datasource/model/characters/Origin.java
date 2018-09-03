@@ -1,9 +1,9 @@
-package com.andrewxa.rickandmorty.datasource.model;
+package com.andrewxa.rickandmorty.datasource.model.characters;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Location {
+public class Origin {
 
     @SerializedName("name")
     @Expose
@@ -27,4 +27,5 @@ public class Location {
     public void setUrl(String url) {
         this.url = url;
     }
+
 }

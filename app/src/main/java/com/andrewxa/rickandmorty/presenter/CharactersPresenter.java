@@ -1,16 +1,11 @@
 package com.andrewxa.rickandmorty.presenter;
 
 import android.content.Context;
-import android.view.View;
 
 import com.andrewxa.rickandmorty.RickAndMortyApp;
 import com.andrewxa.rickandmorty.datasource.contract.Contract;
-import com.andrewxa.rickandmorty.datasource.model.CharactersInfo;
-import com.andrewxa.rickandmorty.datasource.model.Result;
-import com.andrewxa.rickandmorty.view.MainActivity;
+import com.andrewxa.rickandmorty.datasource.model.characters.CharactersInfo;
 import com.andrewxa.rickandmorty.view.fragments.characters.CharactersFragment;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;

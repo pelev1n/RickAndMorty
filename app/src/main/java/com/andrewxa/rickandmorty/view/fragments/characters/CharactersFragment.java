@@ -10,9 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.andrewxa.rickandmorty.R;
 import com.andrewxa.rickandmorty.datasource.contract.Contract;
-import com.andrewxa.rickandmorty.datasource.model.Result;
+import com.andrewxa.rickandmorty.datasource.model.characters.Result;
 import com.andrewxa.rickandmorty.presenter.CharactersPresenter;
-import com.andrewxa.rickandmorty.presenter.Presenter;
 
 import java.util.List;
 

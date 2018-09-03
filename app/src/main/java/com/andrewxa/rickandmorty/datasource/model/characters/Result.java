@@ -1,4 +1,4 @@
-package com.andrewxa.rickandmorty.datasource.model;
+package com.andrewxa.rickandmorty.datasource.model.characters;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

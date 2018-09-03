@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.andrewxa.rickandmorty.R;
-import com.andrewxa.rickandmorty.datasource.model.Result;
+import com.andrewxa.rickandmorty.datasource.model.characters.Result;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
