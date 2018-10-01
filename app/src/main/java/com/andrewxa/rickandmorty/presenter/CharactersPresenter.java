@@ -14,7 +14,7 @@ import retrofit2.Response;
 public class CharactersPresenter implements Contract.Presenter{
 
     Context mContext;
-    Contract.Model view;
+    Contract.View view;
 
     public CharactersPresenter(CharactersFragment view, Context context) {
         this.mContext = context;

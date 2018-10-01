@@ -10,10 +10,11 @@
         android:layout_height="110dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="12dp"
         app:cardBackgroundColor="@color/cardview_light_background"
         app:cardCornerRadius="7dp"
-        app:cardElevation="16dp">
+        app:cardElevation="8dp">
 
         <TextView
             android:id="@+id/nameView"
@@ -59,7 +60,7 @@
             android:layout_height="122dp"
             android:layout_marginLeft="34dp"
             android:layout_marginRight="24dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="14dp"
             app:cardBackgroundColor="@color/cardview_light_background"
             app:cardCornerRadius="7dp"
             app:cardElevation="16dp">

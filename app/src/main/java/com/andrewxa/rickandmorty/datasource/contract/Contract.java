@@ -4,7 +4,7 @@ import com.andrewxa.rickandmorty.datasource.model.characters.Result;
 import java.util.List;
 
 public class Contract {
-    public interface Model {
+    public interface View {
         void getAllCharacters();
         void showAllCharacters(List<Result> resultList);
     }

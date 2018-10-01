@@ -9,7 +9,6 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -24,7 +23,7 @@ import com.andrewxa.rickandmorty.view.fragments.locations.LocationsFragment;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements Contract.Model {
+public class MainActivity extends AppCompatActivity implements Contract.View {
 
     Presenter presenter;
     RecyclerView recyclerView;
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                View view = tab.getCustomView();
+                android.view.View view = tab.getCustomView();
                 CardView cardView = (CardView) view.findViewById(R.id.custom_card);
                 cardView.setRadius(10);
                 cardView.setCardElevation(0);
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements Contract.Model {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-                View view = tab.getCustomView();
+                android.view.View view = tab.getCustomView();
                 CardView cardView = (CardView) view.findViewById(R.id.custom_card);
                 cardView.setRadius(10);
                 cardView.setCardElevation(0);
